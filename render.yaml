@@ -3,7 +3,7 @@ services:
     name: physiocenter-server
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build -w server
+    buildCommand: npm install --workspace=server && npm run build -w server
     startCommand: npm run render-start -w server
     healthCheckPath: /health
     envVars:
