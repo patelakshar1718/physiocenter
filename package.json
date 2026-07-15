@@ -1,0 +1,16 @@
+{
+  "name": "physiocenter",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "server",
+    "web",
+    "scanner-agent"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:web": "npm run dev -w web",
+    "build:server": "npm run build -w server",
+    "build:web": "npm run build -w web"
+  }
+}
