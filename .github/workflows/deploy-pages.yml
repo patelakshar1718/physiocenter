@@ -29,8 +29,11 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - name: Install PCSC Lite dependencies
+        run: sudo apt-get update && sudo apt-get install -y libpcsclite-dev
+
       - name: Install dependencies
-        run: npm install --workspace=web --omit=optional
+        run: npm install
 
       - name: Build web app
         working-directory: web
