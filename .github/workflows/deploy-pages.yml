@@ -30,7 +30,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm install --workspace=web
+        run: npm install --omit=optional --workspace=web
 
       - name: Build web app
         working-directory: web
